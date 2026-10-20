@@ -30,12 +30,20 @@
 
 <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
 
-  <!-- Background Image -->
-  <img
-    src="img/diaaa.png"
-    alt="Birthday Background"
-    class="absolute inset-0 w-full h-full object-cover opacity-50 z-0"
-  >
+  <!-- Background image with its own soft, blurred duplicate behind it -->
+  <div class="hero-image-glow absolute inset-0" aria-hidden="true">
+    <img
+      src="img/diaaa.png"
+      alt=""
+      class="hero-image-glow__blur"
+      aria-hidden="true"
+    >
+    <img
+      src="img/diaaa.png"
+      alt="Birthday Background"
+      class="hero-image-glow__main"
+    >
+  </div>
 
   <!-- Dark Overlay -->
   <div class="absolute inset-0 bg-black/40 z-0"></div>
@@ -87,7 +95,9 @@
       <!-- Timeline Item 1 -->
       <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
         <!-- TODO: Replace with your photo -->
-        <img src="img/dia1.jpeg" alt="photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white"> <!--replce img1.png with name of your img-->
+        <div class="image-glow image-glow--timeline w-full md:w-1/2 rounded-lg">
+          <img src="img/dia1.jpeg" alt="photo 1" class="image-glow__main w-full rounded-lg shadow-xl border-4 border-white">
+        </div> <!--replce img1.png with name of your img-->
         <div class="text-center md:text-left">
           <!-- TODO: Customize the date and story -->
           <h3 class="text-2xl font-anime text-sakura">Hehe small Diaaa!!!</h3>
@@ -98,7 +108,9 @@
       <!-- Timeline Item 2 -->
       <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
         <!-- TODO: Replace with your photo -->
-        <img src="img/dia2.jpeg" alt="photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="image-glow image-glow--timeline w-full md:w-1/2 rounded-lg">
+          <img src="img/dia2.jpeg" alt="photo 2" class="image-glow__main w-full rounded-lg shadow-xl border-4 border-white">
+        </div>
         <div class="text-center md:text-right">
           <!-- TODO: Customize the date and story -->
           <h3 class="text-2xl font-anime text-sakura">Bappa's Favouriteeee!!</h3>
@@ -108,7 +120,9 @@
       </div>
       <!-- Timeline Item 3 (NEW) -->
       <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
-        <img src="img/dia3.jpeg" alt="photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="image-glow image-glow--timeline w-full md:w-1/2 rounded-lg">
+          <img src="img/dia3.jpeg" alt="photo 3" class="image-glow__main w-full rounded-lg shadow-xl border-4 border-white">
+        </div>
         <div class="text-center md:text-left">
           <h3 class="text-2xl font-anime text-sakura">Taaro Iconic Photo</h3>
           <p class="mt-2 text-lg">All timeee Favourite photooo!!</p>
@@ -117,7 +131,9 @@
       </div>
       <!-- Timeline Item 4 (NEW) -->
       <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
-        <img src="img/dia4.jpeg" alt="photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="image-glow image-glow--timeline w-full md:w-1/2 rounded-lg">
+          <img src="img/dia4.jpeg" alt="photo4" class="image-glow__main w-full rounded-lg shadow-xl border-4 border-white">
+        </div>
         <div class="text-center md:text-right">
           <h3 class="text-2xl font-anime text-sakura">Garbaaa Queennn</h3>
           <p class="mt-2 text-lg">Cuttesttt Piccc!!!</p>
@@ -145,7 +161,9 @@
           <!--  Card 1 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia5.jpeg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4"> 
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia5.jpeg" alt="Photo 1" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div> 
               <h3 class="text-2xl font-anime text-sakura">Happiestt</h3>
               <p class="mt-2">"Blutifoollll (Beautifuullllll)”"</p>
             </div>
@@ -153,7 +171,9 @@
           <!--  Card 2 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia6.jpeg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia6.jpeg" alt="Photo 2" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div>
               <h3 class="text-2xl font-anime text-sakura">Birthdayyyy</h3>
               <p class="mt-2">"Too pretty..."</p>
             </div>
@@ -161,7 +181,9 @@
           <!--  Card 3 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia7.jpeg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia7.jpeg" alt="Photo 3" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div>
               <h3 class="text-2xl font-anime text-sakura">Diaaaaaaa!!</h3>
               <p class="mt-2">"Unreal!!"</p>
             </div>
@@ -169,7 +191,9 @@
           <!--  Card 4 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia8.jpeg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia8.jpeg" alt="Photo 4" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div>
               <h3 class="text-2xl font-anime text-sakura">🫶🏻</h3>
               <p class="mt-2">"The best vibe!!"</p>
             </div>
@@ -177,7 +201,9 @@
           <!--  Card 5 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia9.jpeg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia9.jpeg" alt="Photo 5" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div>
               <h3 class="text-2xl font-anime text-sakura">💗</h3>
               <p class="mt-2">"Looking like a DREAM!"</p>
             </div>
@@ -185,7 +211,9 @@
           <!-- Card 6 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/dia10.jpeg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <div class="image-glow image-glow--gallery w-full h-80 rounded-md mb-4">
+                <img src="img/dia10.jpeg" alt="Photo 6" class="image-glow__main w-full h-full object-cover rounded-md">
+              </div>
               <h3 class="text-2xl font-anime text-sakura">😍</h3>
               <p class="mt-2">"Glowing...!!!"</p>
             </div>
@@ -212,6 +240,26 @@
 <!-- These scripts are for the animations and photo gallery -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+
+<script>
+  // Give every photo its own blurred copy in the background.
+  document.querySelectorAll(".image-glow").forEach((wrapper) => {
+    const image = wrapper.querySelector(".image-glow__main");
+    if (!image) return;
+
+    const setBackground = () => {
+      const source = image.currentSrc || image.src;
+      wrapper.style.setProperty("--image-glow-source", `url("${source}")`);
+    };
+
+    if (image.complete) {
+      setBackground();
+    } else {
+      image.addEventListener("load", setBackground, { once: true });
+    }
+  });
+</script>
 
 <!-- Link to your new external JavaScript file -->
 <script src="script.js"></script>
